@@ -16,13 +16,14 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-
+      - name: 스프링부트 애플리케이션 install # (1)
+        run: sudo chmod 777 -R .
       
       - name: 스프링부트 애플리케이션 install # (1)
-        run: sudo ./gradlew clean
+        run: ./gradlew clean
 
       - name: 스프링부트 애플리케이션 빌드 # (1)
-        run: sudo ./gradlew build
+        run: ./gradlew build
 
       - name: 도커 이미지 빌드 # (2)
         run: sudo docker build -t hanwhee2/demo .
