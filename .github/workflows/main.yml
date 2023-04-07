@@ -18,7 +18,7 @@ jobs:
           distribution: 'adopt'
         
       - name: 스프링부트 애플리케이션 install # (1)
-        run: ls -al
+        run: sudo chown -R ubuntu:ubuntu ubuntu
       
       - name: 스프링부트 애플리케이션 install # (1)
         run: ./gradlew clean
