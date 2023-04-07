@@ -35,7 +35,7 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Docker Hub 퍼블리시 # (4)
-        run: sudo docker push hanwhee2/demo
+        run: docker push hanwhee2/demo
       - name: hhh
         run: echo ${{ secrets.DOCKER_USERNAME }}
         
